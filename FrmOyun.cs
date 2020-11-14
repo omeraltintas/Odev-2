@@ -21,15 +21,12 @@ namespace windowformapp
         public FrmOyun()
         {
             InitializeComponent();
-
-
         }
 
         private void FrmOyun_Load(object sender, EventArgs e)
         {
             timer1.Start();
             tmrSure.Start();
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -58,6 +55,7 @@ namespace windowformapp
                 if (sure == 0)
                 {
                     Dur();
+                    Kaydet();
                     DialogResult dialogResult = new DialogResult();
                     dialogResult = MessageBox.Show("Yeniden Oynar Mısınız", "Çıkış", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -72,9 +70,7 @@ namespace windowformapp
                 {
                     Application.Exit();
                 }
-            }
-                Kaydet();
-           
+            }                       
         }
 
         void Dur()
